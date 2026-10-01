@@ -11,11 +11,11 @@ class Carro extends Veiculo {
     return _quantidadePortas;
   }
 
-  set quantidadePortas(int quantidadePortas){
-    if(quantidadePortas < 0 ){
+  set quantidadePortas(int novaQuantidadePortas){
+    if(quantidadePortas > 0 && quantidadePortas <=4 ){
       throw ArgumentError("Numero de portas Invalidas");
     }
-    _quantidadePortas = quantidadePortas;
+    _quantidadePortas = novaQuantidadePortas;
   }
   @override
   String exibirInformacoes(){
