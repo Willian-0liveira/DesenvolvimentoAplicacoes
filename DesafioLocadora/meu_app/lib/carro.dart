@@ -12,14 +12,14 @@ class Carro extends Veiculo {
   }
 
   set quantidadePortas(int novaQuantidadePortas){
-    if(quantidadePortas > 0 && quantidadePortas <=4 ){
+    if(novaQuantidadePortas <= 0 || novaQuantidadePortas >= 5  ){
       throw ArgumentError("Numero de portas Invalidas");
     }
     _quantidadePortas = novaQuantidadePortas;
   }
   @override
   String exibirInformacoes(){
-    return "🚘\n Placa : $placa , Modelo: $modelo , Valor da Diaria: $valorDiaria, Quantidade de Portas: $quantidadePortas";
+    return "🚘 Placa : $placa , Modelo: $modelo , Valor da Diaria: $valorDiaria, Quantidade de Portas: $quantidadePortas";
   }
 }
   
